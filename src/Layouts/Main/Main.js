@@ -1,313 +1,161 @@
-import React, { useState } from "react";
-import HeroBanner from "../../Assets/hero-banner.png";
-import Amazon from "../../Assets/logo/amazon.png";
-import Dribbble from "../../Assets/logo/dribbble.png";
-import Hubspot from "../../Assets/logo/hubspot.png";
-import Netflix from "../../Assets/logo/netflix.png";
-import Notion from "../../Assets/logo/notion.png";
-import Zoom from "../../Assets/logo/zoom.png";
-import Card from "../../Components/Card/card";
-import SEO from "../../Assets/services/seo.png";
-import PPCA from "../../Assets/services/ppca.png";
-import SMM from "../../Assets/services/smm.png";
-import EM from "../../Assets/services/em.png";
-import CC from "../../Assets/services/cc.png";
-import AT from "../../Assets/services/at.png";
-import CtaImage from "../../Assets/cta-img.png";
-import John from '../../Assets/Team/john.png';
-import Jane from '../../Assets/Team/jane.png';
-import Emily from '../../Assets/Team/emily.png';
-import Brian from '../../Assets/Team/brian.png';
-import Sarah from '../../Assets/Team/sarah.png';
-import Michael from '../../Assets/Team/michael.png';
-import FormImage from '../../Assets/form-img.png';
-import { Auth } from "../../Components/Auth/auth";
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Image1 from '../../Assets/Images/img1.jpg';
+import Image2 from '../../Assets/Images/img2.jpeg';
+import Image3 from '../../Assets/Images/img3.jpg';
+import Image4 from '../../Assets/Images/img4.jpeg';
+import Image5 from '../../Assets/Images/img5.jpg';
+import About from '../../Assets/logo/about.png';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css'; 
+import 'slick-carousel/slick/slick-theme.css'; 
 
 const Main = () => {
-  const [active, setActive] = useState(null);
-  const handleToggle = (i) => {
-    setActive(active === i ? null : i);
-  };
-  const LogoList = [Amazon, Dribbble, Hubspot, Netflix, Notion, Zoom];
-  const Services = [
-    {
-      title: "Search engine optimization",
-      path: "/",
-      image: SEO,
-    },
-    {
-      title: "Pay-per-click advertising",
-      path: "/",
-      image: PPCA,
-    },
-    {
-      title: "Social Media Marketing",
-      path: "/",
-      image: SMM,
-    },
-    {
-      title: "Email Marketing",
-      path: "/",
-      image: EM,
-    },
-    {
-      title: "Content Creation",
-      path: "/",
-      image: CC,
-    },
-    {
-      title: "Analytics and Tracking",
-      path: "/",
-      image: AT,
-    },
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      easing: 'ease-in-out',
+    });
+  }, []);
+
+  const Images = [
+    Image1,
+    Image2,
+    Image1,
+    Image2,
+    Image1,
+    Image2,
+    Image1,
+    Image2,
   ];
-  const Team = [
+
+  const gallery = [
     {
-      name : "John Smith",
-      designation : "CEO and Founder", 
-      image : John,
-      description : '10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy'
+      title : "Live Painting",
+      image : Image1,
+      description : "I do live sketches, portraits, watercolor paintings, digital art, and more!",
     },
     {
-      name : "Jane Doe",
-      designation : "CEO and Founder", 
-      image : Jane,
-      description : '7+ years of experience in project management and team leadership. Strong organizational and communication skills'
+      title : "Live Painting",
+      image : Image1,
+      description : "I do live sketches, portraits, watercolor paintings, digital art, and more!",
     },
     {
-      name : "Michael Brown",
-      designation : "CEO and Founder", 
-      image : Michael,
-      description : '5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization'
+      title : "Live Painting",
+      image : Image1,
+      description : "I do live sketches, portraits, watercolor paintings, digital art, and more!",
     },
     {
-      name : "Emily Johnson",
-      designation : "CEO and Founder", 
-      image : Emily,
-      description : '3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis'
-    },
-    {
-      name : "Brian Williams",
-      designation : "CEO and Founder", 
-      image : Brian,
-      description : '4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement'
-    },
-    {
-      name : "Sarah Kim",
-      designation : "CEO and Founder", 
-      image : Sarah,
-      description : '2+ years of experience in writing and editing Skilled in creating compelling, SEO-optimized content for various industries'
-    },
+      title : "Live Painting",
+      image : Image1,
+      description : "I do live sketches, portraits, watercolor paintings, digital art, and more!",
+    }
   ]
-  const Accordion = [
-    {
-      title: "Consultation",
-      content:
-        "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
-    },
-    {
-      title: "Research and Strategy Development",
-      content:
-        "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
-    },
-    {
-      title: "Implementation",
-      content:
-        "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
-    },
-    {
-      title: "Monitoring and Optimization",
-      content:
-        "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
-    },
-    {
-      title: "Reporting and Communication",
-      content:
-        "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
-    },
-    {
-      title: "Continual Improvement",
-      content:
-        "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
-    },
-  ];
+  
+  const settings = {
+    infinite: true,
+    slidesToShow: 5, 
+    slidesToScroll: 1, 
+    autoplay: true,
+    autoplaySpeed: 1000, 
+    arrows: false, 
+    dots: true, 
+    centerMode: true, 
+    centerPadding: '0', 
+  };
+
   return (
-    <div style={{ minHeight: "70vh" }}>
+    <div>
       {/* _________________Hero section_________________________________ */}
       <section className="hero-banner">
         <div className="content">
-          <h1>Navigating the digital landscape for success</h1>
-          <p>
-            Our digital marketing agency helps businesses grow and succeed
-            online through a range of services including SEO, PPC, social media
-            marketing, and content creation.
+          <h1 data-aos="zoom-in">
+            From Imagination
+            <br /> to <span>Canvas</span>
+          </h1>
+          <p data-aos="zoom-in">
+            Hi! I am Anandita Mohanty, an artist.
+            <br /> I do live sketches, portraits, watercolor paintings, digital art, and more!
           </p>
-          <button>Book a consultation</button>
-        </div>
-        <div className="hero-img">
-          <img src={HeroBanner} />
+          <button className="btn-primary">EXPLORE MORE</button>
         </div>
       </section>
       {/* _________________Hero section_________________________________ */}
-      {/* _________________Logo List_________________________________ */}
-      <section className="logo-list">
-        {LogoList.map((logo) => {
-          return (
-            <>
-              <img src={logo} />
-            </>
-          );
-        })}
+
+      {/* _________________________________________ Image Slider ______________________________ */}
+      <section className="img-slider">
+        <Slider {...settings}>
+          {Images.map((img, index) => (
+            <div key={index}>
+              <img src={img} alt={`slide-${index}`} />
+            </div>
+          ))}
+        </Slider>
       </section>
-      {/* _________________Logo List_________________________________ */}
-      {/* _________________Services_________________________________ */}
-      <section className="service-list">
-        <div className="top-content">
-          <h2>Services</h2>
-          <p>
-            At our digital marketing agency, we offer a range of services to
-            help businesses grow and succeed online. These services include:
+       {/* _________________________________________ Image Slider ______________________________ */}
+        {/* ___________________________________About ______________________________ */}
+        <section className="about">
+        <div className="content">
+          <h1 data-aos="zoom-in">
+           About <span>Me</span>
+          </h1>
+          <div className='image-container'>
+          <img data-aos="zoom-out-up" src={About}  />
+          </div>
+          <p data-aos="zoom-in">
+          <span>Art</span> has always been my heartbeat, the driving force behind everything I do. My creative journey began from a young age, and it has blossomed into a deep passion for capturing the beauty of life through various forms of art. Growing up in a city rich with culture and history, I’ve always been surrounded by inspiration. It’s not just about creating; it’s about expressing what I feel, what I see, and what I believe through every piece I craft.<br/><br/>
+
+I study at <span>BK Art College in Bhubaneswar.</span> but my true education comes from within—the desire to learn, to grow, and to pour my heart into my art. In the quiet moments of sketching or painting, I find my connection to the world around me. My work is rooted in the culture I was raised in, a culture that speaks through stories, traditions, and emotions, and it’s this cultural influence that infuses every brushstroke and detail.<br/><br/>
+
+Beyond the traditional art forms I’ve learned, my journey has led me to discover the beauty in other artistic expressions. Capturing live moments has become one of my greatest joys—there is something magical about freezing a fleeting emotion, a spontaneous laugh, or a meaningful glance in time. Photography allows me to share these emotions with the world, each image telling its own story.<br/><br/>
+
+Portraits, too, have become a passion of mine. <span>Drawing or painting a portrait</span> is more than just replicating a face; it’s about capturing a person’s essence, their spirit, and the stories they carry within them. Every portrait I create holds a piece of the person, a glimpse into their world, and I strive to bring that out with every stroke of the pencil or brush.<br/><br/>
+
+Art is a constant exploration, a journey without end. It’s not just about creating something beautiful; it’s about connecting with others, evoking emotions, and sharing stories that are often unsaid. I pour my soul into every piece I create, and through my art, I hope to share a part of who I am and how I see the world.
+
+Thank you for being part of this creative journey with me. I hope my art brings you as much joy, inspiration, and reflection as it brings me.<br/>
           </p>
         </div>
-        <div className="services">
-          {Services.map((service) => {
-            return (
-              <Card
-                title={service?.title}
-                image={service?.image}
-                path={service?.path}
-              />
-            );
-          })}
+      </section>
+      {/* ____________________________ Gallery __________________ */}
+      <section className="gallery">
+  <div className="content">
+    <h1 data-aos="zoom-in">
+      My Art <span>Gallery</span>
+    </h1>
+    <div className="gallery-items">
+      {gallery.map((item, index) => (
+        <div 
+        className={`gallery-item ${index % 2 === 0 ? 'even' : 'odd'}`} 
+        key={index} data-aos="fade-up">
+          <div className="image-container">
+            <img src={item.image}  />
+          </div>
+          <div className="bg">
+          <div className="text-container">
+            <h2>{item.title}</h2>
+            <p>{item.description}</p>
+          </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+{/* ____________________________Contact __________________ */}
+<section className="contact">
+        <div className="content">
+          <h1 data-aos="zoom-in">
+           <span> Get In Touch</span>
+          </h1>
+          <p data-aos="zoom-in">
+          Whether you're looking for a personalized portrait, a stunning painting, or a one-of-a-kind custom piece, I'm here to create art that speaks to you. Reach out today to discuss your ideas and bring your artistic vision to life!
+          </p>
+          <button className="btn-primary">CONTACT</button>
         </div>
       </section>
 
-      {/* _________________Services_________________________________ */}
-      {/* ___________________CTA________________________________ */}
-      <section className="cta">
-        <div className="content">
-          <h3>Let’s make things happen</h3>
-          <p>
-            Contact us today to learn more about how our digital marketing
-            services can help your business grow and succeed online.
-          </p>
-          <button>Get your free proposal</button>
-        </div>
-        <div className="image">
-          <img src={CtaImage} />
-        </div>
-      </section>
-      {/* _________________CTA_________________________________ */}
-      {/* _________________Case Studies_________________________________ */}
-      <section className="case-studies">
-        <div className="top-content">
-          <h2>Case Studies</h2>
-          <p>
-            Explore Real-Life Examples of Our Proven Digital Marketing Success
-            through Our Case Studies
-          </p>
-        </div>
-        <div className="list-wrp">
-          <ul>
-            <li>
-              <p>
-                For a local restaurant, we implemented a targeted PPC campaign
-                that resulted in a 50% increase in website traffic and a 25%
-                increase in sales.
-              </p>
-              <a href="/">Learn more</a>
-            </li>
-            <li>
-              <p>
-                For a B2B software company, we developed an SEO strategy that
-                resulted in a first page ranking for key keywords and a 200%
-                increase in organic traffic.
-              </p>
-              <a href="/">Learn more</a>
-            </li>
-            <li>
-              <p>
-                For a national retail chain, we created a social media marketing
-                campaign that increased followers by 25% and generated a 20%
-                increase in online sales.
-              </p>
-              <a href="/">Learn more</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      {/* _________________Case Studies_________________________________ */}
-      {/* _________________Working Process_________________________________ */}
-      <section className="working-process">
-        <div className="top-content">
-          <h2>Our Working Process </h2>
-          <p>Step-by-Step Guide to Achieving Your Business Goals</p>
-        </div>
-        <div className="accordion-wrp">
-          {Accordion.map((item, i) => {
-            return (
-              <div
-                className={`accordion ${active === i ? "active" : ""}`}
-                key={i}
-                onClick={() => handleToggle(i)}
-              >
-                <div className="title">
-                  <h2>{i + 1}</h2>
-                  <h3>{item?.title}</h3>
-                </div>
-                {active === i && (
-                  <div className="content">
-                    <p>{item.content}</p>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </section>
-      {/* _________________Working Process_________________________________ */}
-      {/* _________________Team List_________________________________ */}
-      <section className="team-list">
-        <div className="top-content">
-          <h2>Team</h2>
-          <p>
-            Meet the skilled and experienced team behind our successful digital
-            marketing strategies
-          </p>
-        </div>
-        <div className="team-list-wrp">
-         {
-          Team.map((item)=> {
-            return (
-              <div className="card">
-              <div className="detail">
-                <img src={item.image} />
-                <div className="detail-item">
-                <h4>{item.name}</h4>
-                <h6>{item.designation}</h6>
-                </div>
-              </div>
-              <p className="description">
-                {item.description}
-              </p>
-              </div>
-            )
-          })
-         }
-        </div>
-      </section>
-      {/* _________________Team List_________________________________ */}
-       {/* _________________Contact Us_________________________________ */}
-       <section className="contact-us">
-       <div className="top-content">
-          <h2>Contact Us</h2>
-          <p>
-          Connect with Us: Let's Discuss Your Digital Marketing Needs
-          </p>
-        </div>
-        <Auth/>
-       </section>
-        {/* _________________Contact Us_________________________________ */}
     </div>
   );
 };

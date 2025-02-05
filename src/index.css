@@ -1,13 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+
+
+:root {
+  --primary-color: #141619;
+  --secondar-color : #ffff;
+  --gradient : linear-gradient(90deg, rgba(102,93,205,1) 0%, rgba(95,164,230,1) 45%, rgba(210,171,103,1) 100%);
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary-color);
+  color: var(--secondar-color);
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  margin: 0 100px;
+}
+
+header {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo img {
+  height: auto;
+  width: 140px;
+}
+
+header .content .menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  font-size: 25px !important;
+  font-family: "Inter", serif;
+}
+header .content .menu-item a {
+color: var(--secondar-color);
+text-decoration: none;
+font-size: 15px;
+}
+header .content .menu-item a:hover {
+  background: var(--gradient);
+  padding: 7px;
+  }
+
+header .get-in-touch {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer ;
+}
+header .get-in-touch .circle{
+ height: 16px;
+ width: 16px;
+ background: var(--gradient);
+ border-radius: 50%;
+}
+.hero-banner {
+  padding: 40px 0;
+}
+
+.hero-banner .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 40px;
+}
+.hero-banner .content h1 {
+  font-size: 76px;
+  margin: 0;
+}
+.hero-banner .content span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+ .btn-primary {
+  background: var(--gradient);
+  padding: 15px 20px;
+  color: var(--secondar-color);
+  border-radius: 2px;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  animation: all 0.4s ease-in-out infinite;
+ }
+ .btn-primary:hover {
+transform: scale(1.1);
+ }
+
+ @keyframes bounce {
+  0%, 100% {
+   /* filter: grayscale(100%); */
+  }
+  50% {
+    /* filter: grayscale(0%); */
+  }
+}
+
+
+.img-slider {
+  width: 100%;
+  height: 400px;
+  padding: 70px 0;
+}
+
+
+.img-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+
+
+/* about  */
+.about .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 40px;
+}
+.about .content h1 {
+  font-size: 76px;
+  margin: 0;
+}
+.about .content span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.about .image-container img {
+  width: 200px;
+  height: 50%;
+  object-fit: cover; 
+ 
+}
+
+
+/* Gallery */
+.gallery {
+  padding: 60px 0;
+}
+.gallery .content h1 {
+  font-size: 76px;
+  margin: 0;
+  text-align: center;
+}
+.gallery .content span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.gallery-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.gallery-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  
+}
+
+.gallery-item.even {
+  flex-direction: row;
+}
+
+.gallery-item.odd{
+flex-direction: row-reverse;
+}
+
+.gallery-item .image-container {
+  width: 40%;
+ 
+}
+
+.gallery-item .image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+/* contact */
+.contact {
+  padding: 40px 0;
+}
+.contact .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.contact .content h1 {
+  font-size: 76px;
+  margin: 0;
+  text-align: center;
+}
+.contact .content span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+
+/* footer */
+footer {
+  padding: 30px 0;
+  border-top: 1px solid var(--secondar-color);
+  display: flex;
+  justify-content: center;
+}
+footer img {
+  width: 30%;
+  height: auto;
 }
