@@ -19,6 +19,7 @@ const Main = () => {
     });
   }, []);
 
+
   const Images = [
     Image1,
     Image2,
@@ -28,6 +29,7 @@ const Main = () => {
     Image2,
     Image1,
     Image2,
+    Image1,
   ];
 
   const gallery = [
