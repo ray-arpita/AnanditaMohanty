@@ -11,16 +11,16 @@ const Header = () => {
     </div>
     <div className="content">
     <div className="menu-item">
-        <NavLink to="/">About Us</NavLink>
-        <NavLink to="/">Services</NavLink>
-        <NavLink to="/">Work With Me</NavLink>
+        <a href="#about">About Me</a>
+        <a href="#gallery">Services</a>
+        <a href="#contact-me">Work With Me</a>
     </div>
   
     </div>
-    <div className='get-in-touch'>
+    <a target='_blank' href="https://www.instagram.com/_anandita.mohanty_/?igsh=OWl6ZHA2aGJlbzM4#" className='get-in-touch'>
      <div className='circle'></div>
       <h4>GET IN TOUCH</h4>
-      </div>
+      </a>
     </header>
   )
 }

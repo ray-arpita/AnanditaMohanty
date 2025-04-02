@@ -65,6 +65,10 @@ header .get-in-touch .circle{
  background: var(--gradient);
  border-radius: 50%;
 }
+header  a{
+ color: #ffff;
+ text-decoration: none;
+ }
 .hero-banner {
   padding: 40px 0;
 }
@@ -96,6 +100,10 @@ header .get-in-touch .circle{
   text-transform: capitalize;
   cursor: pointer;
   animation: all 0.4s ease-in-out infinite;
+ }
+ .btn-primary a {
+  color: var(--secondar-color);
+  text-decoration: none;
  }
  .btn-primary:hover {
 transform: scale(1.1);
@@ -289,10 +297,8 @@ max-width: 100vw;
   .contact .content p {
     margin: 0;
   }
-
+  footer img {
+    width: 70%;
   }
 
-  @media screen and (max-width:900px){
-   
-    
-    }
+  }

@@ -103,7 +103,11 @@ const Main = () => {
             Hi! I am Anandita Mohanty, an artist.
             <br /> I do live sketches, portraits, watercolor paintings, digital art, and more!
           </p>
-          <button className="btn-primary">EXPLORE MORE</button>
+          <button className="btn-primary">
+          <a target='_blank' href="https://www.instagram.com/_anandita.mohanty_/?igsh=OWl6ZHA2aGJlbzM4#">
+            EXPLORE MORE
+          </a>
+            </button>
         </div>
       </section>
       {/* _________________Hero section_________________________________ */}
@@ -144,7 +148,7 @@ Thank you for being part of this creative journey with me. I hope my art brings 
         </div>
       </section>
       {/* ____________________________ Gallery __________________ */}
-      <section className="gallery">
+      <section className="gallery" id="gallery">
   <div className="content">
     <h1 data-aos="zoom-in">
       My Art <span>Gallery</span>
@@ -169,7 +173,7 @@ Thank you for being part of this creative journey with me. I hope my art brings 
   </div>
 </section>
 {/* ____________________________Contact __________________ */}
-<section className="contact">
+<section className="contact" id='contact-me'>
         <div className="content">
           <h1 data-aos="zoom-in">
            <span> Get In Touch</span>
@@ -177,7 +181,11 @@ Thank you for being part of this creative journey with me. I hope my art brings 
           <p data-aos="zoom-in">
           Whether you're looking for a personalized portrait, a stunning painting, or a one-of-a-kind custom piece, I'm here to create art that speaks to you. Reach out today to discuss your ideas and bring your artistic vision to life!
           </p>
-          <button className="btn-primary">CONTACT</button>
+          <button className="btn-primary">
+           <a target='_blank' href="https://www.instagram.com/_anandita.mohanty_/?igsh=OWl6ZHA2aGJlbzM4#">
+            CONTACT
+            </a>
+            </button>
         </div>
       </section>
 
