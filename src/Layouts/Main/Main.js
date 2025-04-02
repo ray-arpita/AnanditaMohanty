@@ -184,7 +184,7 @@ Thank you for being part of this creative journey with me. I hope my art brings 
           <button className="btn-primary">
            <a target='_blank' href="https://www.instagram.com/_anandita.mohanty_/?igsh=OWl6ZHA2aGJlbzM4#">
             CONTACT
-            </a>
+            </a> 
             </button>
         </div>
       </section>
