@@ -65,6 +65,29 @@ const Main = () => {
     dots: true, 
     centerMode: true, 
     centerPadding: '0', 
+    responsive: [
+      {
+        breakpoint: 1024, 
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768, 
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480, 
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   };
 
   return (
@@ -97,7 +120,7 @@ const Main = () => {
       </section>
        {/* _________________________________________ Image Slider ______________________________ */}
         {/* ___________________________________About ______________________________ */}
-        <section className="about">
+        <section className="about" id="about">
         <div className="content">
           <h1 data-aos="zoom-in">
            About <span>Me</span>
