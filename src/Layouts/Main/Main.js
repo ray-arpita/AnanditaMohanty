@@ -1,12 +1,30 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Image1 from '../../Assets/Images/img1.jpg';
-import Image2 from '../../Assets/Images/img2.jpeg';
-import Image3 from '../../Assets/Images/img3.jpg';
-import Image4 from '../../Assets/Images/img4.jpeg';
-import Image5 from '../../Assets/Images/img5.jpg';
+import Image1 from '../../Assets/Images/1.jpg';
+import Image2 from '../../Assets/Images/2.jpg';
+import Image3 from '../../Assets/Images/3.jpg';
+import Image4 from '../../Assets/Images/4.jpg';
+import Image5 from '../../Assets/Images/5.jpg';
+import Image6 from '../../Assets/Images/6.jpg';
+import Image7 from '../../Assets/Images/7.jpg';
+import Image8 from '../../Assets/Images/8.jpg';
+import Image9 from '../../Assets/Images/9.jpg';
+import Image10 from '../../Assets/Images/10.jpg';
+import Image11 from '../../Assets/Images/11.jpg';
+import Image12 from '../../Assets/Images/12.jpg';
+import Image13 from '../../Assets/Images/13.jpg';
+import Image14 from '../../Assets/Images/14.jpg';
+import Image15 from '../../Assets/Images/15.jpg';
+import Image16 from '../../Assets/Images/16.jpg';
 import About from '../../Assets/logo/about.png';
+import Gallery1 from '../../Assets/Images/creative.jpg';
+import Gallery2 from '../../Assets/Images/acrylic.jpg';
+import Gallery3 from '../../Assets/Images/charcol.jpg';
+import Gallery4 from '../../Assets/Images/custom.jpg';
+import Gallery5 from '../../Assets/Images/stilllife.jpg';
+import Gallery6 from '../../Assets/Images/studio.jpg';
+
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css'; 
@@ -23,35 +41,52 @@ const Main = () => {
   const Images = [
     Image1,
     Image2,
-    Image1,
-    Image2,
-    Image1,
-    Image2,
-    Image1,
-    Image2,
-    Image1,
+    Image3,
+    Image4,
+    Image5,
+    Image6,
+    Image7,
+    Image8,
+    Image9,
+    Image10,
+    Image11,
+    Image12,
+    Image13,
+    Image14,
+    Image15,
+    Image16,
   ];
 
   const gallery = [
     {
-      title : "Live Painting",
-      image : Image1,
-      description : "I do live sketches, portraits, watercolor paintings, digital art, and more!",
+      title : "Creative Works",
+      image : Gallery1,
+      description : "A diverse collection of imaginative pieces that explore unique concepts, styles, and storytelling through visual expression.",
     },
     {
-      title : "Live Painting",
-      image : Image1,
-      description : "I do live sketches, portraits, watercolor paintings, digital art, and more!",
+      title : "Acrylic Works",
+      image : Gallery2,
+      description : "Vibrant, layered creations painted with acrylics — showcasing bold color palettes, textures, and dynamic brushwork.",
     },
     {
-      title : "Live Painting",
-      image : Image1,
-      description : "I do live sketches, portraits, watercolor paintings, digital art, and more!",
+      title : "Charcoal Wroks",
+      image : Gallery3,
+      description : "Monochromatic studies capturing form, light, and shadow using the raw, expressive medium of charcoal.",
     },
     {
-      title : "Live Painting",
-      image : Image1,
-      description : "I do live sketches, portraits, watercolor paintings, digital art, and more!",
+      title : "Custom Commissions",
+      image : Gallery4,
+      description : "Personalized artwork tailored to your vision — from portraits to thematic pieces, created on request with care and detail.",
+    },
+    {
+      title : "Still Life Study",
+      image : Gallery5,
+      description : "A series of observational drawings and paintings focused on everyday objects, highlighting composition, shape, and light.",
+    },
+    {
+      title : "Studio Practice",
+      image : Gallery6,
+      description : "Behind-the-scenes explorations and experimental works from the studio — where technique meets spontaneity.",
     }
   ]
   
@@ -62,7 +97,7 @@ const Main = () => {
     autoplay: true,
     autoplaySpeed: 1000, 
     arrows: false, 
-    dots: true, 
+    dots: false, 
     centerMode: true, 
     centerPadding: '0', 
     responsive: [
@@ -101,7 +136,7 @@ const Main = () => {
           </h1>
           <p data-aos="zoom-in">
             Hi! I am Anandita Mohanty, an artist.
-            <br /> I do live sketches, portraits, watercolor paintings, digital art, and more!
+            <br /> I do live sketches, portraits, watercolor paintings and more!
           </p>
           <button className="btn-primary">
           <a target='_blank' href="https://www.instagram.com/_anandita.mohanty_/?igsh=OWl6ZHA2aGJlbzM4#">
